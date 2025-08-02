@@ -3342,17 +3342,29 @@ print(type(hello)) # <class 'function'> => lambda is a function
 # -------------------
 # -- File Handling --
 # -------------------
-# "a" Append  Open File For Appending Values, Create File If Not Exists
-# "r" Read    [Default Value] Open File For Read and Give Error If File is Not Exists
-# "w" Write   Open File For Writing, Create File If Not Exists
-# "x" Create  Create File, Give Error If File Exists
+# "a" => Append  Open File For Appending Values, Create File If Not Exists
+# "r" => Read    [Default Value] Open File For Read and Give Error If File is Not Exists
+# "w" => Write   Open File For Writing, Create File If Not Exists
+# "x" => Create  Create File, Give Error If File Exists
 # --------------------------------------------------
 print(" File Handling ".center(50,"-"))
 
 
 
+import os # os module is used to interact with the operating system
 
+print(os.getcwd()) # Get Current Working Directory
 
+print(os.path.dirname(os.path.abspath(__file__))) # Get Current File Directory
+
+print(os.path.abspath(__file__)) # Get Current File Full Path
+
+os.chdir(os.path.dirname(os.path.abspath(__file__))) # Change Current Working Directory To Current File Directory
+print(os.getcwd())
+
+# ex
+file = open("source for lerne.txt")
+file1 = open("C:\\course\\python\\source for lerne.txt")
 
 
 
