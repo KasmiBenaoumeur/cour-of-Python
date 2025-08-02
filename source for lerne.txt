@@ -1,0 +1,4 @@
+link 01: https://elzero.org/
+link 02: https://www.w3schools.com/python/python_exercises.asp
+link 03: https://pychallenger.com/dashboard/
+link 04: https://elzero.org/category/courses/mastering-python/

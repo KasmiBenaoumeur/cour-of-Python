@@ -1,0 +1,54 @@
+{
+	"files": [
+		{
+			"path": "cour.py",
+			"bookmarks": [
+				{
+					"line": 6,
+					"column": 17,
+					"label": "Comment"
+				},
+				{
+					"line": 38,
+					"column": 37,
+					"label": " Some Data Types in Python "
+				},
+				{
+					"line": 101,
+					"column": 14,
+					"label": "Variables"
+				},
+				{
+					"line": 161,
+					"column": 5,
+					"label": "Escape Sequences Characters"
+				},
+				{
+					"line": 234,
+					"column": 18,
+					"label": "Concatenation"
+				},
+				{
+					"line": 273,
+					"column": 13,
+					"label": "Strings"
+				},
+				{
+					"line": 311,
+					"column": 2,
+					"label": "Strings Indexing & Slicing"
+				},
+				{
+					"line": 362,
+					"column": 5,
+					"label": "Strings Methods"
+				},
+				{
+					"line": 615,
+					"column": 10,
+					"label": "STRING FORMATTING"
+				}
+			]
+		}
+	]
+}
