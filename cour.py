@@ -3335,6 +3335,29 @@ print(type(hello)) # <class 'function'> => lambda is a function
 
 
 
+print(" File Handling ".center(80,'='))
+# ====================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# =======================================================================
+
+
 
 
 
@@ -3355,61 +3378,126 @@ import os # os module is used to interact with the operating system
 
 print(os.getcwd()) # Get Current Working Directory
 
-print(os.path.dirname(os.path.abspath(__file__))) # Get Current File Directory
-
 print(os.path.abspath(__file__)) # Get Current File Full Path
 
+print(os.path.dirname(os.path.abspath(__file__))) # Get Current File Directory
+
 os.chdir(os.path.dirname(os.path.abspath(__file__))) # Change Current Working Directory To Current File Directory
+
 print(os.getcwd())
 
-# ex
+
 file = open("source for lerne.txt")
-file1 = open("C:\\course\\python\\source for lerne.txt")
+file1 = open(r"C:\course\python\source for lerne.txt") # or file1 = open("C:\\course\\python\\source for lerne.txt")
 
 
 
 
 
 
+# --------------------------------
+# -- File Handling => Read File --
+# --------------------------------
+print(" File Handling => Read File ".center(50,"-"))
+
+myFile = open(r"C:\course\python\source for lerne.txt","r")
+myFile2 = open(r"C:\course\python\test.txt","r")
+
+print(myFile) # File Data Objecct
+print(myFile.name)
+print(myFile.mode)
+print(myFile.encoding)
+
+# read() => Read All File Data / seek() => Move Cursor (مؤشر القراءه) To Specific Position / tell() => Get Current Cursor Position (مكان مؤشر القراءه)
+print("read".center(20,'-'))
+
+print(myFile.read())
+print(myFile.tell()) # Get Current Cursor Position
+myFile.seek(0) # Move Cursor To Start Of File
+print(myFile.tell()) # Get Current Cursor Position
+print(myFile.read(19)) # Read First 19 Characters
+myFile.seek(0)
+
+
+# readline() => Read All File Data As List
+print("readline".center(20,'-'))
+
+print(myFile2.readline())
+print(myFile2.readline(6))
+myFile2.seek(0)
+
+
+# readlines() => Read All File Data As List
+print("readlines".center(20,'-'))
+
+print(type(myFile2.readlines())) # <class 'list'>
+myFile2.seek(0)
+print(myFile2.readlines())
+myFile2.seek(0)
+print(myFile2.readlines(15))
+
+
+for line in myFile:
+    print(line)
+    if line.startswith("link 03") :
+        break
+
+
+# close() => Close The File
+print("close".center(20,'-'))
+
+myFile.close()
+myFile2.close()
 
 
 
 
 
 
+# -----------------------------------------------
+# -- File Handling => Write and Append In File --
+# -----------------------------------------------
+print(" File Handling => Write and Append In File ".center(50,"-"))
+
+
+myFile1 = open(r"C:\Users\HP\OneDrive\Desktop\test_File_Handling.txt","w") # Create File If Not Exists Or Overwrite It
+
+# write() => Write Data In File
+print("write".center(20,'-'))
+myFile1.write("Hello From Python File Hondling")
+myFile1.write("\nThis Is A New Line")
+myFile1.write("\nThis Is A New Line 2")
+myFile1.close()
+
+myFile2 = open(r"C:\course\python\fun.txt","w")
+myFile2.write("Kasmi Benaoumeur\n" *100)
+
+
+# writelines() => Write List Data In File
+print("writelines".center(20,'-'))
+
+MyList = ["Osama\n", "Ahmed\n", "Sayed\n", "Ali"]
+
+
+myFile3 =  open(r"C:\course\python\kasmi.txt","w")
+myFile3.writelines(MyList) # Write List Data In File
+myFile3.close()
+
+
+print("Append 'a'".center(20,'-'))
+
+myFile3 =  open(r"C:\course\python\kasmi.txt","a")
+myFile3.write("\nKASMI MOHAMED\n") # Append Data In File
+myFile3.write("KASMI EL_HAJE ")
+myFile3.write("esi")
+myFile3.close()
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# -------------------------------------
+# -- File Handling => Important Info --
+# -------------------------------------
+print(" File Handling => Important Info ".center(50,"-"))
 
 
 
