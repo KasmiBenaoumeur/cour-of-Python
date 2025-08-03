@@ -3373,7 +3373,8 @@ print(" File Handling ".center(80,'='))
 print(" File Handling ".center(50,"-"))
 
 
-
+# os 
+print("os Module".center(50,"-"))
 import os # os module is used to interact with the operating system
 
 print(os.getcwd()) # Get Current Working Directory
@@ -3494,10 +3495,515 @@ myFile3.close()
 
 
 
+
+
 # -------------------------------------
 # -- File Handling => Important Info --
 # -------------------------------------
 print(" File Handling => Important Info ".center(50,"-"))
+
+
+# truncate() => Truncate File To Specific Size
+print("truncate".center(20,'-'))
+
+
+myFile3= open(r"C:\course\python\kasmi.txt","a")
+myFile3.truncate(5)
+
+# os.remove() => Remove File
+print("os.remove".center(20,'-'))
+import os
+os.remove(r"C:\course\python\fun.txt") # Remove File If Exists
+
+
+
+
+print(" Built In Function ".center(80,'='))
+# ====================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# =======================================================================
+# ------------------------
+# -- Built In Functions --
+# ------------------------
+# all() => Returns True If All Elements Are True Or The Iterable Is Empty
+# any() => Returns True If Any Element Is True, If The Iterable Is Empty Returns False
+# bin() => Convert Integer To Binary String
+# id() => Returns The Unique ID Of An Object
+# ------------------------
+
+
+# all() => Returns True If All Elements Are True Or The Iterable Is Empty
+print("all()".center(20,'-'))
+
+x = [1,2,3,4]
+d = [1,2,3,[]]
+
+if all(x) :
+    print("All Elements in list x Are True")
+else :
+    print("Not All Elements in list x Are True")    
+if all(d) :
+    print("All Elements in list d Are True")
+else :
+    print("Not All Elements in list d Are True")    
+
+
+# any() => Returns True If Any Element Is True, If The Iterable Is Empty Returns False
+print("any()".center(20,'-'))
+
+x = []
+d = [1,2,3,[]]
+
+if any(x) :
+    print("At Least One Element in list x Is True")
+else :
+    print("No Elements in list x Are True")
+if any(d) :
+    print("At Least One Element in list d Is True")
+else :
+    print("No Elements in list d Are True")
+
+
+
+# bin() => Convert Integer To Binary String
+print("bin()".center(20,'-'))
+
+print(bin(2))
+print(bin(10))
+
+
+# id() => Returns The Unique ID Of An Object
+print("id()".center(20,'-'))
+
+a= 1 
+b =2
+print(id(a)) # Unique ID Of Object a
+print(id(b)) # Unique ID Of Object b
+print(id(1))
+
+if id(1) == id(a):
+    print("The ID Of 1 Is The Same As The ID Of a because They Are The Same Object")
+else :
+    print("It's Not The Same Object so The ID Is Not The Same")
+
+
+
+
+# -------- PART 02 ------------
+# sum() => Returns The Sum Of All Elements In An Iterable
+# round() => Returns A Rounded Number
+# range() => Returns A Sequence Of Numbers
+# print() => Prints The Given Object To The Console
+# -----------------------------
+
+
+# sum(iterable,start) => Returns The Sum Of All Elements In An Iterable
+print("sum()".center(20,'-'))
+
+x =[1,2,3,4,5]
+y = (1,2,4,5)
+print(sum(x)) # 15
+print(sum(x,4)) # 19 => Start From 4 
+print(sum(y))
+
+
+# round(number,numofdigits) => Returns A Rounded Number
+print("round()".center(20,'-'))
+
+print(round(3.14159))
+print(round(3.14159,2)) # 3.14
+print(round(2.546,2))
+print(round(2.546))
+
+
+# range(start,end,step) => Returns A Sequence Of Numbers
+print("range()".center(20,'-'))
+
+print(list(range(0))) # Empty List
+print(list(range(10)))# list of numbers from 0 to 9
+print(list(range(0,20,2))) # list of numbers from 1 to 9
+
+
+# print(object) => Prints The Given Object To The Console
+print("print()".center(20,'-'))
+
+# end="" => End Of Line ,Default Is New Line
+# sep="" => Separator Between Values, Default Is Space
+
+print("Hello Benaoumeur How Are You ")
+print("Hello", "Benaoumeur","How","Are","You",sep="|",end=" ?\n")
+print("First Line","Second Line",sep="\n") 
+print("Kasmi","Benaoumeur",sep=" ",end=" .....") 
+
+
+
+
+
+# -------- PART 03 ------------
+# abs() => Returns The Absolute Value Of A Number
+# pow() => Returns The Power Of A Number
+# min() => Returns The Minimum Value From An Iterable
+# max() => Returns The Maximum Value From An Iterable
+# slice() => Returns A Slice Object
+# -----------------------------
+
+
+# abs(number) => Returns The Absolute Value Of A Number
+print("abs()".center(20,'-'))
+
+print(abs(-10)) # 10
+print(abs(9))
+
+
+# pow(base,exp,mod) => Returns The Power Of A Number
+print("pow()".center(20,'-'))
+
+print(pow(2,3)) # 8 => 2^3
+print(pow(4,2))
+print(pow(2,3,3)) # 2^3 % 3 => 8 % 3 => 2
+
+
+# min(iterable) => Returns The Minimum Value From An Iterable
+print("min()".center(20,'-'))
+
+print(min([1,2,3,4,5])) # 1
+print(min((2,0,4,5))) # 0
+print(min(16,15,20,22,35))
+print(min("Y","T","O"))
+
+
+# max(iterable) => Returns The Maximum Value From An Iterable
+print("max()".center(20,'-'))
+
+print(max([1,2,3,4,5])) # 5
+print(max((2,0,4,10))) # 10
+print(max(1,15,20,22,35))
+print(max("Y","T","O"))
+
+
+# slice(start,end,step) => Returns A Slice Object
+print("slice()".center(20,'-')) 
+
+a = ["A","B","C","D","E","F","G"]
+print(a[:3])
+print(a[slice(3)]) # slice object
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

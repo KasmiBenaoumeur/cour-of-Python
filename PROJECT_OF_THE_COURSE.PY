@@ -5,8 +5,8 @@
 # Email : benoumeurkasmi@gmail.com
 # Phone number : 07 83 15 87 73
 # Address : Froha 
-# Purpose : This project is ......
-# Version : 1.1
+# Purpose : This project is snake game
+# Version : ...
 # License : MIT License
 
 
