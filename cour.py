@@ -3710,14 +3710,43 @@ print(a[slice(3)]) # slice object
 
 
 
+# -------------------------------
+# -- Built In Functions => Map --
+# -------------------------------
+# [1] Map Take A Function + Iterable
+# [2] Map Called Map Because It Map The Function On Every Element
+# [3] The Function Can Be Pre-Defined Or Lambda Function
+# --------------------------------
+print(" Built In Functions => Map ".center(50,"-"))
 
 
+# Use Map With Predefined Function 
+print("Use Map With Predefined Function".center(50,"-"))
 
+def formatText(text):
+    return f"- {text.strip().title()} -"
 
+myTexts = [" OSama ","AHMED"," sAYED"]
+myFormatedData = map(formatText,myTexts)
+print(type(myFormatedData)) # <class 'map'>
+print(myFormatedData) # <map object at 0x...>
 
+for item in myFormatedData:
+    print(item)
+print('-'*10)
+for item in map(formatText,myTexts):
+    print(item)
+print('-'*10)
+for item in list(map(formatText,myTexts)):
+    print(item)
 
 
+# Use Map With Lambda Function 
+print("Use Map With Lambda Function".center(50,"-"))
 
+myTexts = [" OSama ","AHMED"," sAYED","    ALI"]
+for item in map(lambda test: f"- {test.strip().title()} -", myTexts):
+    print(item)
 
 
 
@@ -3725,74 +3754,170 @@ print(a[slice(3)]) # slice object
 
 
 
+# ----------------------------------
+# -- Built In Functions => Filter --
+# ----------------------------------
+# [1] Filter Take A Function + Iterable
+# [2] Filter Run A Function On Every Element
+# [3] The Function Can Be Pre-Defined Or Lambda Function
+# [4] Filter Out All Elements For Which The Function Returns True
+# [5] The Function Need To Return Boolean Value
+# ----------------------------------
+print(" Built In Functions => Filter ".center(50,"-"))
 
 
+# Example 01
+print("Example 01".center(30,"-"))
 
+myNumbers = [0,0,1,19,10,20,100,5,0,0]
+def chackNumber(num):
+    if num > 10 :
+        return num
 
+def chackN(num):
+    return num > 10
 
+result = filter(chackNumber,myNumbers)
+for num in result :
+    print(num)
 
+Result = filter(chackN,myNumbers)
+for num in Result :
+    print(num)
 
 
+# Example 02
+print("Example 02".center(30,"-"))
 
+myNumbers = [0,0,1,19,10,20,100,5,0,0]
+def chacknum(num):
+    if num == 0 :
+        return num
+result = filter(chacknum,myNumbers)
+for num in result :
+    print(num) # don't print 0 because the function return 0 and 0 is False in Python
 
+def chacknum(num):
+    if num == 0 :
+        return True
+result = filter(chacknum,myNumbers)
+for num in result :
+    print(num) # print 0 because the function return True
 
 
+# Example 03
+print("Example 03".center(30,"-"))
 
+names = ["Osama", "Ahmed", "Sayed", "Ali", "Fatima", "Chaima"]
+def chackname(name):
+    return name.startswith("A")
 
+result = filter(chackname,names)
+for name in result :
+    print(name)
 
 
+# Example 04
+print("Example 04".center(30,'-'))
 
+numbers =[1,2,3,5,4,6,52,45,63,20]
 
+result = filter(lambda num:  num % 2 ==0 ,numbers)
+for num in result :
+    print(num)
 
 
 
 
 
+# ----------------------------------
+# -- Built In Functions => Reduce --
+# ----------------------------------
+# [1] Reduce Take A Function + Iterator
+# [2] Reduce Run A Function On First and Second Element And Give Result
+# [3] Then Run Function On Result And Third Element
+# [4] Then Run Function On Rsult And Fourth Element And So On
+# [5] Till One ELement is Left And This is The Result of The Reduce
+# [6] The Function Can Be Pre-Defined Function or Lambda Function
+# ---------------------------------------------------------------
+print("Built In Functions => Reduce".center(50,'-'))
 
+from functools import reduce
+nums = [3, 7, 2, 10, 6]
 
+# Example 01
+print("Example 01".center(30,'-'))
 
+def sumAll(num1,num2):
+    return num1+num2
+result = reduce(sumAll,nums)
+print(result)
 
 
+# Example 02 :
+print("Example 02".center(30,'-'))
 
+result = reduce(lambda a,b :a if a>b else b   ,nums)
+print(result)
 
 
 
 
 
+# ------------------------
+# -- Built In Functions --
+# ------------------------
+# enumerate()
+# help()
+# reversed()
+# ------------------------
 
+# enumerate(iterable,start =(default is 0))
+print("enumerate()".center(25,'-'))
 
+mySkills = ["Html","Css","Js","PHP"]
+mySkillsWithCounter = enumerate(mySkills)
+print(type(mySkillsWithCounter))
+for skill in mySkillsWithCounter :
+    print(skill)
+print('-'*5)
+for skill in enumerate(mySkills,start = 1):
+    print(skill)
+print('-'*5)
+for count,skill in enumerate(mySkills,start = 1):
+    print(f"{count} => {skill}")
 
 
+# help()
+print("help()".center(25,'-'))
 
+help(print)
+help(int)
 
 
+# reversed(iterable)
+print("reversed()".center(25,'-'))
 
+# Example 01
+print("Example 01".center(20,'-'))
 
+print(reversed("Kasmi"))
+name =""
+for char in reversed("Kasmi") :
+    print(char)
+    name +=char  
 
+print(name)
 
+# Example 02
+print("Example 02".center(20,'-'))
 
+mySkills = ["Html","Css","Js","PHP"]
+revskills = list(reversed(mySkills))
+for skill in list(reversed(mySkills)) :
+    print(skill)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(revskills)
 
 
 
